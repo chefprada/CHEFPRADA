@@ -3,127 +3,231 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Staffconnex — Recrutement Restauration</title>
-  <meta name="description" content="Cabinet de recrutement spécialisé en hôtellerie-restauration. Candidats qualifiés, process simple, résultats rapides.">
+  <title>StaffconneX — Le lien parfait entre talent culinaire et restaurant</title>
+  <meta name="description" content="Cabinet de recrutement spécialisé Hôtellerie-Restauration. Recrutement simple et efficace. Formule Essentielle et Formule Premium. Nice, Monaco et alentours.">
   <link rel="canonical" href="https://staffconnex.fr/">
 
-  <!-- Open Graph / Partage -->
-  <meta property="og:title" content="Staffconnex — Recrutement Restauration">
-  <meta property="og:description" content="Candidats qualifiés, process simple, résultats rapides.">
+  <!-- Open Graph -->
+  <meta property="og:title" content="StaffconneX — Recrutement Restauration">
+  <meta property="og:description" content="Recrutement simple et efficace. Formule Essentielle & Premium. Zone : Nice, Monaco et alentours.">
   <meta property="og:url" content="https://staffconnex.fr/">
   <meta property="og:type" content="website">
-  <!-- <meta property="og:image" content="https://staffconnex.fr/og.jpg"> -->
-
-  <!-- Favicon (optionnel) -->
-  <!-- <link rel="icon" href="/favicon.ico"> -->
 
   <style>
+    /* ====== PALETTE (depuis ton visuel) ====== */
     :root{
-      --bg:#0f172a; --surface:#111827; --text:#e5e7eb; --muted:#9ca3af; --accent:#38bdf8; --ok:#22c55e;
-      --max:1100px; --radius:18px; --gap:18px
+      --teal:#138c8a;         /* vert canard/bleu-vert */
+      --teal-dark:#0a6766;
+      --teal-ink:#0b2c2c;
+      --orange:#e66520;       /* orange chaud */
+      --amber:#f2b41f;        /* jaune/ambre */
+      --bg:#0b1220;           /* fond sombre futuriste */
+      --text:#e6eef5;
+      --muted:#a5b3c6;
+      --glass:rgba(255,255,255,.06);
+      --glass-border:rgba(255,255,255,.14);
+      --radius:18px;
+      --max:1120px;
     }
+
+    /* ====== RESET + BASE ====== */
     *{box-sizing:border-box}
     html,body{margin:0}
     body{
       font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Arial,sans-serif;
-      background:linear-gradient(135deg,#0f172a,#0b1022);
       color:var(--text);
+      background:
+        radial-gradient(1200px 500px at -10% -10%, rgba(242,180,31,.13), transparent 60%),
+        radial-gradient(1200px 500px at 110% 10%, rgba(230,101,32,.12), transparent 55%),
+        linear-gradient(160deg,#0b1220,#0d152a 40%, #0b1220 90%);
+      min-height:100dvh;
       line-height:1.6;
     }
+    a{color:var(--teal);text-decoration:none}
+    a:hover{text-decoration:underline}
     .wrap{max-width:var(--max);margin:0 auto;padding:28px}
-    header{display:flex;align-items:center;justify-content:space-between;gap:10px}
-    .brand{font-weight:800}
-    nav{display:flex;gap:14px;flex-wrap:wrap}
-    nav a{color:var(--muted);text-decoration:none}
-    nav a:hover{color:var(--accent)}
-    .hero{display:grid;gap:12px;padding:60px 0}
-    h1{margin:0;font-size:clamp(28px,5.6vw,52px);line-height:1.1}
+    .bar{height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.18),transparent);margin:26px 0}
+
+    /* ====== HEADER ====== */
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.2px}
+    .logo{
+      display:inline-grid;place-items:center;width:38px;height:38px;border-radius:12px;
+      background: conic-gradient(from 180deg at 50% 50%, var(--amber), var(--orange), var(--teal));
+      box-shadow:0 6px 20px rgba(19,140,138,.35);
+    }
+    nav{display:flex;gap:16px;flex-wrap:wrap}
+    nav a{color:var(--muted)}
+    nav a:hover{color:var(--text)}
+
+    /* ====== HERO ====== */
+    .hero{
+      display:grid;gap:14px;padding:60px 0;position:relative;overflow:hidden;
+    }
+    .hero h1{margin:0;font-size:clamp(30px,6.2vw,60px);line-height:1.08}
+    .tag{
+      display:inline-block;padding:7px 12px;border-radius:999px;
+      border:1px solid var(--glass-border);background:var(--glass);color:var(--muted);font-size:12px
+    }
+    .kicker{font-weight:800;color:var(--orange);letter-spacing:.2px}
+    .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:6px}
+    .btn{
+      display:inline-block;padding:12px 18px;border-radius:999px;font-weight:700;
+      background:linear-gradient(135deg,var(--teal),#19a7a5);color:#001414;border:0
+    }
+    .btn:hover{filter:brightness(1.06)}
+    .btn.secondary{
+      background:transparent;color:var(--text);border:1px solid var(--glass-border)
+    }
+    .hero-badges{display:flex;gap:12px;flex-wrap:wrap;margin-top:6px}
+    .badge{
+      display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:12px;
+      background:var(--glass);border:1px solid var(--glass-border);color:var(--text);font-size:14px
+    }
+    .dot{width:10px;height:10px;border-radius:999px;background:var(--teal)}
+
+    /* ====== SECTIONS ====== */
+    h2{margin:0 0 10px;font-size:clamp(20px,3.5vw,28px)}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px}
+    .card{
+      background:var(--glass);border:1px solid var(--glass-border);border-radius:var(--radius);padding:18px;
+      backdrop-filter:saturate(140%) blur(10px)
+    }
     .muted{color:var(--muted)}
-    .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:8px}
-    .btn{display:inline-block;padding:12px 18px;border-radius:999px;background:var(--accent);color:#00131a;text-decoration:none;font-weight:700}
-    .btn.secondary{background:transparent;border:1px solid rgba(255,255,255,.16);color:var(--text)}
-    .btn.secondary:hover{background:rgba(255,255,255,.08)}
-    .bar{height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.18),transparent);margin:22px 0}
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:var(--gap)}
-    .card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);backdrop-filter:saturate(140%) blur(8px);padding:18px;border-radius:var(--radius)}
-    h2{margin:0 0 8px}
-    .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:var(--gap)}
-    .stat{padding:16px;border-radius:14px;background:rgba(34,197,94,.12);border:1px solid rgba(34,197,94,.25);text-align:center}
-    .big{font-size:30px;font-weight:800}
+
+    /* ====== PRICING ====== */
+    .pricing{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+    .price{
+      position:relative;overflow:hidden;border-radius:var(--radius);padding:20px;
+      color:#001313;background:#e8f6f6;border:2px solid #c7eceb
+    }
+    .price h3{margin:0 0 6px}
+    .pill{
+      position:absolute;right:14px;top:14px;font-size:12px;
+      background:var(--teal);color:#001313;padding:6px 10px;border-radius:999px
+    }
+    .price.orange{background:#fff3ec;border-color:#ffd9c7}
+    .price .note{font-size:13px;color:#123}
+    .tick{color:var(--teal-dark);font-weight:700}
+    .tick.o{color:#a64512}
+
+    /* ====== STATS ====== */
+    .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px}
+    .stat{
+      text-align:center;padding:18px;border-radius:14px;border:1px solid var(--glass-border);background:var(--glass)
+    }
+    .stat .big{font-size:30px;font-weight:800;color:var(--amber)}
+
+    /* ====== CONTACT ====== */
     form{display:grid;gap:10px}
-    input,textarea{width:100%;padding:12px;border-radius:12px;border:1px solid rgba(255,255,255,.15);background:rgba(255,255,255,.04);color:var(--text)}
-    input::placeholder,textarea::placeholder{color:#94a3b8}
-    button{all:unset}
-    footer{margin:56px 0 10px;text-align:center;font-size:14px;color:var(--muted)}
-    a.link{color:var(--accent);text-decoration:none}
-    a.link:hover{text-decoration:underline}
-    .pill{display:inline-block;padding:6px 10px;border-radius:999px;border:1px solid rgba(255,255,255,.16);color:var(--muted);font-size:12px}
+    input,textarea{
+      width:100%;padding:12px;border-radius:12px;border:1px solid var(--glass-border);
+      background:rgba(255,255,255,.04);color:var(--text)
+    }
+    input::placeholder,textarea::placeholder{color:#93a6bd}
+    .contact-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}
+    .contact-card{display:flex;align-items:center;gap:10px;padding:14px;border-radius:14px;border:1px solid var(--glass-border);background:var(--glass)}
+    .w{background:linear-gradient(135deg,#25d36622,transparent)}
+    .m{background:linear-gradient(135deg,#ffd54f33,transparent)}
+    .l{background:linear-gradient(135deg,#ff7a1f22,transparent)}
+
+    /* ====== FOOTER ====== */
+    footer{margin:56px 0 14px;text-align:center;color:var(--muted);font-size:14px}
+    footer a{color:var(--teal)}
+
     @media (prefers-color-scheme: light){
-      body{background:#f7f9fc;color:#0b1220}
-      .card{background:#ffffffd9;border-color:#e8eaf1}
-      .btn.secondary{border-color:#d9dde8}
-      .bar{background:linear-gradient(90deg,transparent,#d9dde8,transparent)}
+      body{background:#f5f8fb;color:#0b1220}
+      nav a{color:#5b6a82}
+      .card{background:#ffffffcc;border-color:#e7edf6}
     }
   </style>
 </head>
 <body>
   <div class="wrap">
+
+    <!-- ========== HEADER ========== -->
     <header>
-      <div class="brand">🍽️ Staffconnex</div>
+      <div class="brand">
+        <span class="logo" aria-hidden="true"></span>
+        <span>StaffconneX</span>
+      </div>
       <nav>
         <a href="#services">Services</a>
-        <a href="#pourquoi">Pourquoi nous</a>
+        <a href="#offres">Formules</a>
         <a href="#contact">Contact</a>
       </nav>
     </header>
 
+    <!-- ========== HERO ========== -->
     <section class="hero">
-      <span class="pill">Cabinet de recrutement — Restauration</span>
-      <h1>Recrutez des talents fiables, sans prise de tête.</h1>
-      <p class="muted">Spécialistes Hôtellerie-Restauration : ex-chef cuisinier, réseau vérifié, process rapide. CDI, CDD et extras.</p>
+      <span class="tag">Cabinet de recrutement — Hôtellerie & Restauration</span>
+      <h1><span class="kicker">LE LIEN PARFAIT ENTRE</span><br>talent culinaire et restaurant</h1>
+      <p class="muted">Chaque recrutement est unique, comme votre établissement. Process clair, candidats vérifiés, résultat rapide.</p>
       <div class="cta">
-        <a class="btn" href="#contact">Demander un contact</a>
-        <a class="btn secondary" href="#services">Voir nos services</a>
+        <a class="btn" href="#contact">Contactez-moi</a>
+        <a class="btn secondary" href="#offres">Voir les formules</a>
+      </div>
+      <div class="hero-badges">
+        <span class="badge"><span class="dot"></span> Zone : Nice, Monaco et alentours</span>
+        <span class="badge"><span class="dot" style="background:var(--amber)"></span> Réponse rapide</span>
+        <span class="badge"><span class="dot" style="background:var(--orange)"></span> Candidats qualifiés</span>
       </div>
     </section>
 
     <div class="bar"></div>
 
-    <section id="pourquoi" class="grid">
+    <!-- ========== POURQUOI ========== -->
+    <section id="services" class="grid">
       <div class="card">
-        <h3>Expertise terrain</h3>
-        <p class="muted">On connaît les contraintes de service et les profils qui tiennent la cadence.</p>
+        <h2>Pourquoi nous choisir ?</h2>
+        <p class="muted">Ex-chef cuisinier, réseau opérationnel, compréhension fine des contraintes de service. On vous présente des profils qui tiennent la cadence.</p>
       </div>
       <div class="card">
-        <h3>Réseau qualifié</h3>
-        <p class="muted">Candidats vérifiés, références contrôlées, disponibilité réelle.</p>
+        <h2>Ce que nous faisons</h2>
+        <ul class="muted" style="padding-left:18px;margin:0">
+          <li>Recrutement cuisine (chefs, sous-chefs, chefs de partie, commis)</li>
+          <li>Recrutement salle & management (responsables, sommellerie, direction)</li>
+          <li>Recherches express et remplacements prioritaires</li>
+        </ul>
       </div>
       <div class="card">
-        <h3>Process simple</h3>
-        <p class="muted">Brief clair → short-list rapide → essai → embauche.</p>
+        <h2>Process simple</h2>
+        <p class="muted">Brief clair → short-list rapide → essai → embauche. Zéro blabla.</p>
       </div>
     </section>
 
-    <section id="services" class="card" style="margin-top:18px">
-      <h2>Nos services</h2>
-      <div class="grid">
-        <div class="card">
-          <h3>Recrutement cuisine</h3>
-          <p class="muted">Chefs, sous-chefs, chefs de partie, commis. France entière.</p>
-        </div>
-        <div class="card">
-          <h3>Salle & direction</h3>
-          <p class="muted">Managers, responsables salle, sommellerie, direction.</p>
-        </div>
-        <div class="card">
-          <h3>Mission express</h3>
-          <p class="muted">Besoin urgent ? Activation réseau en priorité 48 h.</p>
-        </div>
+    <!-- ========== OFFRES ==========
+         (d’après ton image : Essentielle + Premium) -->
+    <section id="offres" style="margin-top:16px">
+      <h2>Formules</h2>
+      <div class="pricing" style="margin-top:8px">
+        <article class="price">
+          <span class="pill">Formule Essentielle</span>
+          <h3 style="color:var(--teal-dark)">Recrutement simple et efficace</h3>
+          <p class="note">Jusqu’à 6 recrutements par an.<br>Engagement 12 mois <strong>ou</strong> tarif par candidat.<br><em>Tarifs sur demande.</em></p>
+          <ul style="margin:10px 0 0 18px">
+            <li class="tick">Profils ciblés et vérifiés</li>
+            <li class="tick">Suivi jusqu’à la prise de poste</li>
+            <li class="tick">Reporting rapide</li>
+          </ul>
+        </article>
+
+        <article class="price orange">
+          <span class="pill" style="background:linear-gradient(135deg,var(--orange),#ff9552);color:white">Formule Premium</span>
+          <h3 style="color:#8a3a10">Recrutement + suivi & stratégie</h3>
+          <p class="note">Accompagnement personnalisé, conseil et stratégie RH.<br>Engagement 24 mois.<br><em>Tarifs sur demande.</em></p>
+          <ul style="margin:10px 0 0 18px">
+            <li class="tick o">Audit rapide des besoins</li>
+            <li class="tick o">Plan d’actions & priorisation</li>
+            <li class="tick o">Suivi de performance</li>
+          </ul>
+        </article>
       </div>
     </section>
 
-    <section class="card" style="margin-top:18px">
-      <h2>Chiffres</h2>
+    <!-- ========== STATS ========== -->
+    <section class="card" style="margin-top:16px">
+      <h2>Chiffres qui rassurent</h2>
       <div class="stats">
         <div class="stat"><div class="big">3 +</div>années d’expérience</div>
         <div class="stat"><div class="big">50 +</div>candidats placés</div>
@@ -131,38 +235,47 @@
       </div>
     </section>
 
-    <section class="card" id="contact" style="margin-top:18px">
+    <!-- ========== CONTACT ========== -->
+    <section id="contact" class="card" style="margin-top:16px">
       <h2>Contact</h2>
+      <div class="contact-cards" style="margin:6px 0 12px">
+        <div class="contact-card w">
+          <!-- WhatsApp -->
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="#25D366" aria-hidden="true"><path d="M20.52 3.48A11.93 11.93 0 0 0 12.06 0C5.55.03.3 5.29.32 11.8c0 2.08.54 4.11 1.57 5.91L0 24l6.45-1.84a12 12 0 0 0 5.61 1.43h.05c6.5-.03 11.76-5.29 11.79-11.8a11.86 11.86 0 0 0-3.38-8.31Zm-8.46 18.1h-.04a9.95 9.95 0 0 1-5.07-1.38l-.36-.21-3.83 1.1 1.09-3.73-.24-.38a9.94 9.94 0 0 1-1.54-5.38c.03-5.52 4.53-10 10.05-10 2.69 0 5.22 1.05 7.12 2.95a9.94 9.94 0 0 1 2.94 7.1c-.03 5.52-4.53 10-10.12 10ZM17.6 14.3c-.27-.14-1.6-.79-1.85-.88-.25-.1-.44-.14-.62.14-.19.29-.71.88-.87 1.06-.16.17-.32.2-.6.07-.28-.14-1.17-.43-2.23-1.37-.82-.73-1.37-1.64-1.53-1.92-.16-.28-.02-.43.12-.57.12-.12.28-.32.42-.48.14-.16.19-.27.29-.46.1-.2.05-.36-.02-.5-.07-.14-.62-1.51-.85-2.07-.22-.53-.45-.46-.62-.47h-.53c-.16 0-.43.06-.66.3-.23.23-.87.86-.87 2.09s.9 2.42 1.02 2.59c.12.17 1.77 2.71 4.3 3.8.6.26 1.06.42 1.43.54.6.19 1.14.16 1.57.1.48-.07 1.6-.65 1.83-1.28.22-.63.22-1.16.15-1.28-.06-.11-.25-.18-.52-.31Z"/></svg>
+          <div><strong>WhatsApp</strong><br><a href="https://wa.me/33660778735" target="_blank" rel="noopener">+33 6 60 77 87 35</a></div>
+        </div>
+        <div class="contact-card m">
+          <!-- Mail -->
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="#f2b41f" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v.4l10 6.25L22 6.4V6a2 2 0 0 0-2-2Zm2 5.2-9.47 5.9a1 1 0 0 1-1.06 0L2 9.2V18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9.2Z"/></svg>
+          <div><strong>Email</strong><br><a href="mailto:contact@staffconnex.fr">contact@staffconnex.fr</a></div>
+        </div>
+        <div class="contact-card l">
+          <!-- Zone -->
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="#e66520" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z"/></svg>
+          <div><strong>Zone d’activité</strong><br>Nice, Monaco et alentours</div>
+        </div>
+      </div>
 
-      <!-- Formulaire Formspree (recommandé). Remplace TON_ID par l'identifiant donné par Formspree. -->
+      <!-- Formulaire (Formspree). Remplace TON_ID par l'identifiant fourni. -->
       <form action="https://formspree.io/f/TON_ID" method="POST">
         <input type="text" name="Nom" placeholder="Votre nom" required>
         <input type="email" name="Email" placeholder="Votre email" required>
         <textarea name="Message" rows="4" placeholder="Votre besoin (poste, ville, délai)"></textarea>
         <input type="hidden" name="_subject" value="Nouveau message depuis staffconnex.fr">
         <button class="btn" type="submit">Envoyer</button>
-        <p class="muted" style="margin-top:6px">Ou écrivez-nous : <a class="link" href="mailto:contact@staffconnex.fr">contact@staffconnex.fr</a> · 06 60 77 87 35</p>
       </form>
-
-      <!-- Si tu préfères l'ouverture de l'appli mail, utilise ceci à la place :
-      <form action="mailto:contact@staffconnex.fr" method="post" enctype="text/plain"> ... </form>
-      -->
+      <p class="muted" style="margin-top:8px">Préférence téléphone ? Appelez-moi au <a href="tel:+33660778735">06 60 77 87 35</a>.</p>
     </section>
 
+    <!-- ========== FOOTER ========== -->
     <footer>
-      © <span id="year"></span> Staffconnex — Nice (06100) · <a class="link" href="tel:+33660778735">06 60 77 87 35</a> ·
-      <a class="link" href="/politique-de-confidentialite.html">Politique de confidentialité</a>
+      © <span id="year"></span> StaffconneX — Le lien parfait entre talent culinaire et restaurant ·
+      <a href="/politique-de-confidentialite.html">Politique de confidentialité</a>
     </footer>
   </div>
 
-  <script>document.getElementById('year').textContent=new Date().getFullYear()</script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
-User-agent: *
-Allow: /
-Sitemap: https://staffconnex.fr/sitemap.xml
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://staffconnex.fr/</loc></url>
-  <url><loc>https://staffconnex.fr/politique-de-confidentialite.html</loc></url>
-</urlset>
