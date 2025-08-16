@@ -4,8 +4,19 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Staffconnex — Recrutement Restauration</title>
-  <meta name="description" content="Cabinet de recrutement spécialisé en restauration. Candidats qualifiés, process simple, résultats rapides.">
+  <meta name="description" content="Cabinet de recrutement spécialisé en hôtellerie-restauration. Candidats qualifiés, process simple, résultats rapides.">
   <link rel="canonical" href="https://staffconnex.fr/">
+
+  <!-- Open Graph / Partage -->
+  <meta property="og:title" content="Staffconnex — Recrutement Restauration">
+  <meta property="og:description" content="Candidats qualifiés, process simple, résultats rapides.">
+  <meta property="og:url" content="https://staffconnex.fr/">
+  <meta property="og:type" content="website">
+  <!-- <meta property="og:image" content="https://staffconnex.fr/og.jpg"> -->
+
+  <!-- Favicon (optionnel) -->
+  <!-- <link rel="icon" href="/favicon.ico"> -->
+
   <style>
     :root{
       --bg:#0f172a; --surface:#111827; --text:#e5e7eb; --muted:#9ca3af; --accent:#38bdf8; --ok:#22c55e;
@@ -31,6 +42,7 @@
     .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:8px}
     .btn{display:inline-block;padding:12px 18px;border-radius:999px;background:var(--accent);color:#00131a;text-decoration:none;font-weight:700}
     .btn.secondary{background:transparent;border:1px solid rgba(255,255,255,.16);color:var(--text)}
+    .btn.secondary:hover{background:rgba(255,255,255,.08)}
     .bar{height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.18),transparent);margin:22px 0}
     .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:var(--gap)}
     .card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);backdrop-filter:saturate(140%) blur(8px);padding:18px;border-radius:var(--radius)}
@@ -46,8 +58,6 @@
     a.link{color:var(--accent);text-decoration:none}
     a.link:hover{text-decoration:underline}
     .pill{display:inline-block;padding:6px 10px;border-radius:999px;border:1px solid rgba(255,255,255,.16);color:var(--muted);font-size:12px}
-    .logos{display:flex;gap:14px;flex-wrap:wrap;opacity:.85}
-    .logos img{height:26px;filter:grayscale(1);opacity:.9}
     @media (prefers-color-scheme: light){
       body{background:#f7f9fc;color:#0b1220}
       .card{background:#ffffffd9;border-color:#e8eaf1}
@@ -74,11 +84,6 @@
       <div class="cta">
         <a class="btn" href="#contact">Demander un contact</a>
         <a class="btn secondary" href="#services">Voir nos services</a>
-      </div>
-      <div class="logos">
-        <img src="https://dummyimage.com/120x26/ccc/fff.png&text=Client+1" alt="Client 1">
-        <img src="https://dummyimage.com/120x26/ccc/fff.png&text=Client+2" alt="Client 2">
-        <img src="https://dummyimage.com/120x26/ccc/fff.png&text=Client+3" alt="Client 3">
       </div>
     </section>
 
@@ -128,26 +133,36 @@
 
     <section class="card" id="contact" style="margin-top:18px">
       <h2>Contact</h2>
-      <!-- Option simple par email -->
-      <form action="mailto:contact@staffconnex.fr" method="post" enctype="text/plain">
+
+      <!-- Formulaire Formspree (recommandé). Remplace TON_ID par l'identifiant donné par Formspree. -->
+      <form action="https://formspree.io/f/TON_ID" method="POST">
         <input type="text" name="Nom" placeholder="Votre nom" required>
         <input type="email" name="Email" placeholder="Votre email" required>
         <textarea name="Message" rows="4" placeholder="Votre besoin (poste, ville, délai)"></textarea>
+        <input type="hidden" name="_subject" value="Nouveau message depuis staffconnex.fr">
         <button class="btn" type="submit">Envoyer</button>
-        <p class="muted" style="margin-top:6px">Ou écrivez-nous : <a class="link" href="mailto:contact@staffconnex.fr">contact@staffconnex.fr</a></p>
+        <p class="muted" style="margin-top:6px">Ou écrivez-nous : <a class="link" href="mailto:contact@staffconnex.fr">contact@staffconnex.fr</a> · 06 60 77 87 35</p>
       </form>
-      <!-- Option Formspree (remplacez l'action) 
-      <form action="https://formspree.io/f/TON_ID" method="POST">
-        ...
-      </form>
+
+      <!-- Si tu préfères l'ouverture de l'appli mail, utilise ceci à la place :
+      <form action="mailto:contact@staffconnex.fr" method="post" enctype="text/plain"> ... </form>
       -->
     </section>
 
     <footer>
-      © <span id="year"></span> Staffconnex — <a class="link" href="/politique-de-confidentialite.html">Politique de confidentialité</a>
+      © <span id="year"></span> Staffconnex — Nice (06100) · <a class="link" href="tel:+33660778735">06 60 77 87 35</a> ·
+      <a class="link" href="/politique-de-confidentialite.html">Politique de confidentialité</a>
     </footer>
   </div>
 
   <script>document.getElementById('year').textContent=new Date().getFullYear()</script>
 </body>
 </html>
+User-agent: *
+Allow: /
+Sitemap: https://staffconnex.fr/sitemap.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://staffconnex.fr/</loc></url>
+  <url><loc>https://staffconnex.fr/politique-de-confidentialite.html</loc></url>
+</urlset>
