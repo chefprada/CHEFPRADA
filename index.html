@@ -1,89 +1,104 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>StaffconneX - Recrutement Culinaire</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>StaffconneX – Le lien parfait entre talent culinaire et restaurant</title>
+
+  <!-- Sécurité navigateur (aucun script, formulaire autorisé vers Formspree) -->
+  <meta http-equiv="Content-Security-Policy" content="
+    default-src 'self';
+    script-src 'none';
+    img-src 'self' data: https:;
+    style-src 'self';
+    font-src 'self' data:;
+    connect-src https://formspree.io;
+    form-action https://formspree.io;
+    frame-ancestors 'none';
+    base-uri 'none';
+    upgrade-insecure-requests">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="Referrer-Policy" content="no-referrer-when-downgrade">
+
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Header -->
-  <header class="site-header">
-    <div class="wrap">
-      <img src="logo.png" alt="StaffconneX" class="logo">
-      <h1>StaffconneX</h1>
-      <p>Le lien parfait entre <strong>talent culinaire</strong> et <strong>restaurant</strong></p>
+  <!-- Bandeau haut avec logo + image -->
+  <header class="top">
+    <div class="top-wrap">
+      <img class="logo" src="logo.png" alt="StaffconneX">
+    </div>
+    <div class="hero-img" aria-hidden="true">
+      <!-- mets un fichier hero.jpg si tu veux une photo de cuisine -->
+      <!-- <img src="hero.jpg" alt=""> -->
+      <div class="ribbon ribbon-left"></div>
+      <div class="ribbon ribbon-right"></div>
     </div>
   </header>
 
-  <hr class="sep">
+  <main class="wrap">
+    <!-- Titre principal comme sur le flyer -->
+    <section class="hero-text">
+      <h1>STAFFCONNEX</h1>
+      <h2 class="kicker">LE LIEN PARFAIT ENTRE</h2>
+      <p class="strap">TALENT CULINAIRE ET RESTAURANT</p>
+      <p class="lead">
+        Chaque recrutement est unique, comme votre établissement ! Un service pensé pour
+        <strong>VOTRE restaurant</strong>, selon <strong>VOS besoins</strong>.
+      </p>
+    </section>
 
-  <!-- Présentation -->
-  <section class="wrap intro">
-    <h2>Un service pensé pour VOTRE restaurant</h2>
-    <p>Chaque recrutement est unique, comme votre établissement. Process clair, candidats vérifiés, résultat rapide.</p>
-  </section>
+    <!-- Deux formules -->
+    <section id="formules" class="plans">
+      <article class="plan plan-teal">
+        <div class="pill">FORMULE ESSENTIELLE</div>
+        <h3>Recrutement simple et efficace</h3>
+        <p>Jusqu’à 6 recrutements par an</p>
+        <p><strong>Engagement 12 mois</strong> ou <strong>tarif par candidat</strong></p>
+        <p class="ask">TARIFS SUR DEMANDE</p>
+      </article>
 
-  <hr class="sep">
-
-  <!-- Formules -->
-  <section class="wrap pricing">
-    <h2>Nos Formules</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>Essentielle</h3>
-        <p>Recrutement simple et efficace. Jusqu’à 6 recrutements par an.</p>
-        <p><strong>Engagement 12 mois</strong> ou tarif par candidat</p>
-      </div>
-      <div class="card premium">
-        <h3>Premium</h3>
-        <p>Recrutement + suivi, conseil et stratégie personnalisés.</p>
+      <article class="plan plan-orange">
+        <div class="pill">FORMULE PREMIUM</div>
+        <h3>Recrutement + suivi, conseil & stratégie personnalisés</h3>
         <p><strong>Engagement 24 mois</strong></p>
+        <p class="ask">TARIFS SUR DEMANDE</p>
+      </article>
+    </section>
+
+    <!-- Lien pour discuter -->
+    <p class="center small-muted">Discutons ensemble pour trouver la meilleure solution pour vous !</p>
+  </main>
+
+  <!-- Bandeau contact (comme en bas du flyer) -->
+  <section id="contact" class="contact-bar">
+    <div class="contact-wrap">
+      <a class="cta" href="https://wa.me/33660778735" target="_blank" rel="noopener">
+        CONTACTEZ-MOI AU <strong>06 60 77 87 35</strong>
+      </a>
+      <div class="line">
+        <span>✉️ <a href="mailto:contact@staffconnex.fr">contact@staffconnex.fr</a></span>
+        <span>📍 Zone d’activité : Nice, Monaco et alentours</span>
       </div>
+
+      <form class="mini-form" action="https://formspree.io/f/xblkerdz" method="POST">
+        <input name="Nom" type="text" placeholder="Votre nom" required>
+        <input name="Email" type="email" placeholder="Votre email" required>
+        <input name="Message" type="text" placeholder="Votre besoin (poste, ville, délai)" required>
+        <input type="hidden" name="_subject" value="Message — staffconnex.fr">
+        <button type="submit">Envoyer</button>
+      </form>
+
+      <p class="anti">⚠️ Ne mettez aucune information sensible (CB, mots de passe, etc.).</p>
     </div>
   </section>
 
-  <hr class="sep">
-
-  <!-- Chiffres -->
-  <section class="wrap stats">
-    <article class="stat"><div class="big">3</div><p>jours en moyenne pour trouver un candidat</p></article>
-    <article class="stat"><div class="big">50+</div><p>restaurants partenaires</p></article>
-    <article class="stat"><div class="big">15+</div><p>années d’expérience</p></article>
-  </section>
-
-  <hr class="sep">
-
-  <!-- Contact -->
-  <section id="contact" class="wrap contact">
-    <h2>Contact</h2>
-    <div class="contact-ways">
-      <a class="way w" href="https://wa.me/33660778735">WhatsApp</a>
-      <a class="way m" href="mailto:contact@staffconnex.fr">Email</a>
-      <div class="way l"><strong>Zone d’activité : Nice, Monaco et alentours</strong></div>
-    </div>
-
-    <!-- Formspree -->
-    <form action="https://formspree.io/f/xblkerdz" method="POST">
-      <input name="Nom" type="text" placeholder="Votre nom" required>
-      <input name="Email" type="email" placeholder="Votre email" required>
-      <textarea name="Message" rows="4" placeholder="Votre message" required></textarea>
-      <input type="hidden" name="_subject" value="Nouveau message via StaffconneX.fr">
-      <button class="btn btn-primary" type="submit">Envoyer</button>
-    </form>
-
-    <p class="muted small">Suivez–nous sur 
-      <a href="https://www.instagram.com/staffconnex" target="_blank">Instagram</a>
-    </p>
-  </section>
-
-  <!-- Footer -->
-  <footer class="site-footer">
-    <div class="wrap">
-      <p>&copy; 2024 StaffconneX - Tous droits réservés</p>
-    </div>
+  <footer class="foot">
+    © <span id="y"></span> StaffconneX — Recrutement cuisine • Instagram :
+    <a href="https://www.instagram.com/staffconnex" target="_blank" rel="noopener">@staffconnex</a>
   </footer>
 
+  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
 </body>
 </html>
