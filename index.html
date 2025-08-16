@@ -7,39 +7,53 @@
   <meta name="description" content="Cabinet de recrutement spécialisé en restauration. Candidats qualifiés, process simple, résultats rapides.">
   <link rel="canonical" href="https://staffconnex.fr/">
   <style>
-    :root{--bg:#0b1220;--panel:#0e1627;--txt:#e6e9ef;--muted:#a3adbf;--acc:#38bdf8;--ok:#22c55e}
-    *{box-sizing:border-box}html,body{margin:0}
-    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Arial,sans-serif;background:linear-gradient(140deg,#0b1220,#111a2e);color:var(--txt)}
-    .wrap{max-width:1080px;margin:0 auto;padding:28px}
-    header{display:flex;justify-content:space-between;align-items:center}
-    .brand{font-weight:800;letter-spacing:.3px}
-    nav a{color:var(--muted);text-decoration:none;margin-left:16px}
-    nav a:hover{color:var(--acc)}
-    .hero{display:grid;gap:14px;padding:64px 0}
-    h1{font-size:clamp(30px,6vw,56px);line-height:1.1;margin:0}
-    p{margin:0}
+    :root{
+      --bg:#0f172a; --surface:#111827; --text:#e5e7eb; --muted:#9ca3af; --accent:#38bdf8; --ok:#22c55e;
+      --max:1100px; --radius:18px; --gap:18px
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0}
+    body{
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Arial,sans-serif;
+      background:linear-gradient(135deg,#0f172a,#0b1022);
+      color:var(--text);
+      line-height:1.6;
+    }
+    .wrap{max-width:var(--max);margin:0 auto;padding:28px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:10px}
+    .brand{font-weight:800}
+    nav{display:flex;gap:14px;flex-wrap:wrap}
+    nav a{color:var(--muted);text-decoration:none}
+    nav a:hover{color:var(--accent)}
+    .hero{display:grid;gap:12px;padding:60px 0}
+    h1{margin:0;font-size:clamp(28px,5.6vw,52px);line-height:1.1}
     .muted{color:var(--muted)}
-    .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:10px}
-    .btn{display:inline-block;padding:12px 18px;border-radius:999px;background:var(--acc);color:#001018;text-decoration:none;font-weight:700}
-    .btn.secondary{background:transparent;border:1px solid rgba(255,255,255,.15);color:var(--txt)}
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
-    .card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);backdrop-filter:saturate(140%) blur(8px);padding:20px;border-radius:18px}
-    h2{margin:0 0 8px}
-    .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}
-    .stat{padding:16px;border-radius:14px;background:rgba(34,197,94,.12);border:1px solid rgba(34,197,94,.25);text-align:center}
-    .big{font-size:32px;font-weight:800}
-    .list{display:grid;gap:10px}
-    .list li{list-style:none;padding-left:0}
+    .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:8px}
+    .btn{display:inline-block;padding:12px 18px;border-radius:999px;background:var(--accent);color:#00131a;text-decoration:none;font-weight:700}
+    .btn.secondary{background:transparent;border:1px solid rgba(255,255,255,.16);color:var(--text)}
     .bar{height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.18),transparent);margin:22px 0}
-    footer{margin:56px 0 16px;font-size:14px;color:var(--muted);text-align:center}
-    a.link{color:var(--acc);text-decoration:none}
-    a.link:hover{text-decoration:underline}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:var(--gap)}
+    .card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);backdrop-filter:saturate(140%) blur(8px);padding:18px;border-radius:var(--radius)}
+    h2{margin:0 0 8px}
+    .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:var(--gap)}
+    .stat{padding:16px;border-radius:14px;background:rgba(34,197,94,.12);border:1px solid rgba(34,197,94,.25);text-align:center}
+    .big{font-size:30px;font-weight:800}
     form{display:grid;gap:10px}
-    input,textarea{width:100%;padding:12px;border-radius:12px;border:1px solid rgba(255,255,255,.15);background:rgba(255,255,255,.04);color:var(--txt)}
+    input,textarea{width:100%;padding:12px;border-radius:12px;border:1px solid rgba(255,255,255,.15);background:rgba(255,255,255,.04);color:var(--text)}
     input::placeholder,textarea::placeholder{color:#94a3b8}
     button{all:unset}
-    .notice{font-size:12px;color:var(--muted)}
+    footer{margin:56px 0 10px;text-align:center;font-size:14px;color:var(--muted)}
+    a.link{color:var(--accent);text-decoration:none}
+    a.link:hover{text-decoration:underline}
     .pill{display:inline-block;padding:6px 10px;border-radius:999px;border:1px solid rgba(255,255,255,.16);color:var(--muted);font-size:12px}
+    .logos{display:flex;gap:14px;flex-wrap:wrap;opacity:.85}
+    .logos img{height:26px;filter:grayscale(1);opacity:.9}
+    @media (prefers-color-scheme: light){
+      body{background:#f7f9fc;color:#0b1220}
+      .card{background:#ffffffd9;border-color:#e8eaf1}
+      .btn.secondary{border-color:#d9dde8}
+      .bar{background:linear-gradient(90deg,transparent,#d9dde8,transparent)}
+    }
   </style>
 </head>
 <body>
@@ -55,11 +69,16 @@
 
     <section class="hero">
       <span class="pill">Cabinet de recrutement — Restauration</span>
-      <h1>Recrutez vos talents en cuisine, <br>sans prise de tête.</h1>
-      <p class="muted">Ex-chef cuisinier, réseau qualifié, process rapide. CDI, CDD ou extras.</p>
+      <h1>Recrutez des talents fiables, sans prise de tête.</h1>
+      <p class="muted">Spécialistes Hôtellerie-Restauration : ex-chef cuisinier, réseau vérifié, process rapide. CDI, CDD et extras.</p>
       <div class="cta">
         <a class="btn" href="#contact">Demander un contact</a>
         <a class="btn secondary" href="#services">Voir nos services</a>
+      </div>
+      <div class="logos">
+        <img src="https://dummyimage.com/120x26/ccc/fff.png&text=Client+1" alt="Client 1">
+        <img src="https://dummyimage.com/120x26/ccc/fff.png&text=Client+2" alt="Client 2">
+        <img src="https://dummyimage.com/120x26/ccc/fff.png&text=Client+3" alt="Client 3">
       </div>
     </section>
 
@@ -68,19 +87,19 @@
     <section id="pourquoi" class="grid">
       <div class="card">
         <h3>Expertise terrain</h3>
-        <p class="muted">On connaît la brigade, les pics de service, et les profils qui tiennent la route.</p>
+        <p class="muted">On connaît les contraintes de service et les profils qui tiennent la cadence.</p>
       </div>
       <div class="card">
-        <h3>Réseau vérifié</h3>
-        <p class="muted">Candidats recommandés, références vérifiées, disponibilité réelle.</p>
+        <h3>Réseau qualifié</h3>
+        <p class="muted">Candidats vérifiés, références contrôlées, disponibilité réelle.</p>
       </div>
       <div class="card">
         <h3>Process simple</h3>
-        <p class="muted">Brief clair → short-list rapide → essai → embauche. Pas de bla-bla.</p>
+        <p class="muted">Brief clair → short-list rapide → essai → embauche.</p>
       </div>
     </section>
 
-    <section id="services" class="card" style="margin-top:16px">
+    <section id="services" class="card" style="margin-top:18px">
       <h2>Nos services</h2>
       <div class="grid">
         <div class="card">
@@ -93,13 +112,13 @@
         </div>
         <div class="card">
           <h3>Mission express</h3>
-          <p class="muted">Besoin urgent ? On active le réseau en priorité 48 h.</p>
+          <p class="muted">Besoin urgent ? Activation réseau en priorité 48 h.</p>
         </div>
       </div>
     </section>
 
-    <section class="card" style="margin-top:16px">
-      <h2>Chiffres qui rassurent</h2>
+    <section class="card" style="margin-top:18px">
+      <h2>Chiffres</h2>
       <div class="stats">
         <div class="stat"><div class="big">3 +</div>années d’expérience</div>
         <div class="stat"><div class="big">50 +</div>candidats placés</div>
@@ -107,21 +126,21 @@
       </div>
     </section>
 
-    <section class="card" style="margin-top:16px">
-      <h2>Témoignages</h2>
-      <p class="muted">“Profil exact livré en 10 jours. On a gagné une saison.” — <strong>Brasserie du Port</strong></p>
-      <p class="muted">“Process clair et candidats fiables.” — <strong>La Table des Amis</strong></p>
-    </section>
-
-    <section id="contact" class="card" style="margin-top:16px">
+    <section class="card" id="contact" style="margin-top:18px">
       <h2>Contact</h2>
+      <!-- Option simple par email -->
       <form action="mailto:contact@staffconnex.fr" method="post" enctype="text/plain">
         <input type="text" name="Nom" placeholder="Votre nom" required>
         <input type="email" name="Email" placeholder="Votre email" required>
         <textarea name="Message" rows="4" placeholder="Votre besoin (poste, ville, délai)"></textarea>
         <button class="btn" type="submit">Envoyer</button>
-        <div class="notice">Ou écrivez-nous : <a class="link" href="mailto:contact@staffconnex.fr">contact@staffconnex.fr</a></div>
+        <p class="muted" style="margin-top:6px">Ou écrivez-nous : <a class="link" href="mailto:contact@staffconnex.fr">contact@staffconnex.fr</a></p>
       </form>
+      <!-- Option Formspree (remplacez l'action) 
+      <form action="https://formspree.io/f/TON_ID" method="POST">
+        ...
+      </form>
+      -->
     </section>
 
     <footer>
