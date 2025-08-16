@@ -1,162 +1,82 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>StaffconneX — Recrutement cuisine</title>
-  <meta name="description" content="Recrutement 100% cuisine : chefs, sous-chefs, chefs de partie, commis, pâtisserie. Process clair, candidats vérifiés, résultat rapide. Nice, Monaco et alentours.">
-  <link rel="canonical" href="https://staffconnex.fr/">
-  <meta property="og:title" content="StaffconneX — Recrutement cuisine">
-  <meta property="og:description" content="Chefs, sous-chefs, chefs de partie, commis, pâtisserie. Zone : Nice, Monaco et alentours.">
-  <meta property="og:url" content="https://staffconnex.fr/">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StaffconneX - Le lien parfait entre talents culinaires et restaurants</title>
+
+  <!-- Sécurité conseillée pour site statique -->
+  <meta http-equiv="Content-Security-Policy"
+        content="
+          default-src 'self';
+          script-src 'none';
+          style-src 'self';
+          img-src 'self' data: https:;
+          font-src 'self' data:;
+          connect-src https://formspree.io;
+          form-action https://formspree.io;
+          base-uri 'none';
+          frame-ancestors 'none';
+          upgrade-insecure-requests
+        ">
+  <meta http-equiv="Referrer-Policy" content="no-referrer-when-downgrade">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta name="format-detection" content="telephone=no">
+
+  <!-- Styles -->
   <link rel="stylesheet" href="style.css">
-  <!-- Optionnel : <link rel="icon" href="favicon.ico"> -->
 </head>
-<body id="accueil">
+<body>
 
   <!-- Header -->
   <header class="site-header">
-    <div class="nav wrap">
-      <a class="brand" href="#accueil" aria-label="Accueil StaffconneX">
-        <img src="logo.png" alt="StaffconneX" class="logo">
-      </a>
-      <nav class="menu" aria-label="Navigation principale">
-        <a href="#services">Services</a>
-        <a href="#formules">Formules</a>
-        <a href="#contact" class="accent">Contact</a>
-        <a class="social" href="https://www.instagram.com/staffconnex?igsh=MWNlNWdxNGxuengzbQ%3D%3D&utm_source=qr" target="_blank" rel="noopener" aria-label="Instagram">Instagram</a>
-      </nav>
-      <a class="btn btn-primary" href="https://wa.me/33660778735" target="_blank" rel="noopener">WhatsApp</a>
+    <div class="wrap">
+      <img src="logo.png" alt="Logo StaffconneX" style="height:60px;">
+      <h1>StaffconneX</h1>
+      <p>Le lien parfait entre talents culinaires et restaurants</p>
     </div>
   </header>
-
-  <!-- Hero -->
-  <section class="hero wrap">
-    <p class="tag">Cabinet de recrutement — Hôtellerie & Restauration</p>
-    <h1><span class="kicker">LE LIEN PARFAIT ENTRE</span><br>talent culinaire et restaurant</h1>
-    <p class="lead">
-      Recrutement <strong>100% cuisine</strong> : chefs, sous-chefs, chefs de partie, commis, pâtisserie.
-      Process clair, candidats vérifiés, résultat rapide. Zone : Nice, Monaco et alentours.
-    </p>
-    <div class="cta">
-      <a class="btn btn-primary" href="https://wa.me/33660778735" target="_blank" rel="noopener">Contactez-moi</a>
-      <a class="btn btn-outline" href="#formules">Voir les formules</a>
-    </div>
-
-    <!-- Optionnel : ajoutez hero.webp dans votre dépôt et décommentez la ligne ci-dessous -->
-    <!-- <div class="hero-media"><img src="hero.webp" alt="Brigade en cuisine — StaffconneX"></div> -->
-
-    <ul class="badges">
-      <li><span class="dot teal"></span> Zone : Nice, Monaco et alentours</li>
-      <li><span class="dot amber"></span> Réponse rapide</li>
-      <li><span class="dot orange"></span> Candidats qualifiés</li>
-    </ul>
-  </section>
-
-  <hr class="sep">
-
-  <!-- Services -->
-  <section id="services" class="wrap grid">
-    <article class="card">
-      <h2>Pourquoi nous choisir ?</h2>
-      <p class="muted">Ex-chef cuisinier, réseau opérationnel, compréhension des contraintes de service. On vous présente des profils qui tiennent la cadence.</p>
-    </article>
-    <article class="card">
-      <h2>Recrutement cuisine</h2>
-      <p class="muted">Chefs, sous-chefs, chefs de partie, commis. France entière.</p>
-    </article>
-    <article class="card">
-      <h2>Pâtisserie</h2>
-      <p class="muted">Chefs pâtissiers, seconds, commis pâtisserie.</p>
-    </article>
-    <article class="card">
-      <h2>Mission express</h2>
-      <p class="muted">Remplacements prioritaires et recherches urgentes en 48 h.</p>
-    </article>
-  </section>
-
-  <hr class="sep">
-
-  <!-- Formules -->
-  <section id="formules" class="wrap">
-    <h2>Formules</h2>
-    <div class="pricing">
-      <article class="price">
-        <span class="pill">Formule Essentielle</span>
-        <h3>Recrutement simple & efficace</h3>
-        <p class="muted">Jusqu’à 6 recrutements/an. Engagement 12 mois <strong>ou</strong> tarif par candidat. <em>Tarifs sur demande.</em></p>
-        <ul class="list">
-          <li>Profils ciblés et vérifiés</li>
-          <li>Suivi jusqu’à la prise de poste</li>
-          <li>Reporting rapide</li>
-        </ul>
-        <a class="btn btn-outline" href="mailto:contact@staffconnex.fr?subject=Devis%20Formule%20Essentielle">Demander un devis</a>
-      </article>
-
-      <article class="price premium">
-        <span class="pill pill-orange">Formule Premium</span>
-        <h3>Recrutement + suivi & stratégie</h3>
-        <p class="muted">Accompagnement personnalisé, conseil et stratégie RH. Engagement 24 mois. <em>Tarifs sur demande.</em></p>
-        <ul class="list">
-          <li>Audit rapide des besoins</li>
-          <li>Plan d’actions & priorisation</li>
-          <li>Suivi de performance</li>
-        </ul>
-        <a class="btn btn-primary" href="mailto:contact@staffconnex.fr?subject=Devis%20Formule%20Premium">Demander un devis</a>
-      </article>
-    </div>
-  </section>
 
   <hr class="sep">
 
   <!-- Chiffres -->
   <section class="wrap stats">
-    <article class="stat"><div class="big">3 +</div><div>années d’expérience</div></article>
-    <article class="stat"><div class="big">50 +</div><div>candidats placés</div></article>
-    <article class="stat"><div class="big">15 +</div><div>clients récurrents</div></article>
+    <article class="stat"><div class="big">3</div><p>ans d’expérience</p></article>
+    <article class="stat"><div class="big">50+</div><p>restaurants accompagnés</p></article>
+    <article class="stat"><div class="big">15+</div><p>candidats placés chaque mois</p></article>
   </section>
 
   <!-- Contact -->
-<section id="contact" class="wrap contact">
-  <h2>Contact</h2>
+  <section id="contact" class="wrap contact">
+    <h2>Contact</h2>
+    <div class="contact-ways">
+      <a class="way w" href="https://wa.me/33660778735">WhatsApp</a>
+      <a class="way m" href="mailto:contact@staffconnex.fr">Email</a>
+      <div class="way l"><strong>Zone d’activité : Nice, Monaco et alentours</strong></div>
+    </div>
 
-  <div class="contact-ways">
-    <a class="way w" href="https://wa.me/33660778735" target="_blank" rel="noopener"><strong>WhatsApp</strong> · 06 60 77 87 35</a>
-    <a class="way m" href="mailto:contact@staffconnex.fr"><strong>Email</strong> · contact@staffconnex.fr</a>
-    <div class="way l"><strong>Zone d’activité</strong> · Nice, Monaco et alentours</div>
-  </div>
+    <p><strong>⚠️ Merci de ne pas renseigner d’informations sensibles (CB, mots de passe, etc.).</strong></p>
 
-  <!-- Formulaire : envoi via Formspree -->
-  <form action="https://formspree.io/f/xblkerdz" method="POST" class="form">
-    <input name="name"  type="text"  placeholder="Votre nom" required>
-    <input name="email" type="email" placeholder="Votre email" required>
-    <textarea name="message" rows="4" placeholder="Votre besoin (poste, ville, délai)" required></textarea>
+    <!-- Formulaire Formspree -->
+    <form action="https://formspree.io/f/xblkerdz" method="POST">
+      <input name="Nom" type="text" placeholder="Votre nom" required>
+      <input name="Email" type="email" placeholder="Votre email" required>
+      <textarea name="Message" rows="4" placeholder="Votre message" required></textarea>
+      <input type="hidden" name="_subject" value="Nouveau message depuis le site StaffconneX">
+      <button class="btn btn-primary" type="submit">Envoyer</button>
+    </form>
 
-    <!-- options utiles -->
-    <input type="hidden" name="_subject"  value="Message — staffconnex.fr">
-    <input type="hidden" name="_language" value="fr">
-    <!-- anti-spam -->
-    <input type="text" name="_gotcha" style="display:none">
-
-    <!-- (optionnel) décommente pour rediriger vers /merci.html après envoi -->
-    <!-- <input type="hidden" name="_redirect" value="https://staffconnex.fr/merci.html"> -->
-
-    <button class="btn btn-primary" type="submit">Envoyer</button>
-  </form>
-
-  <p class="muted small" style="margin-top:8px">
-    Suivez-nous sur <a href="https://www.instagram.com/staffconnex?igsh=MWNlNWdxNGxuengzbQ%3D%3D&utm_source=qr" target="_blank" rel="noopener">Instagram</a>.
-  </p>
-</section>
+    <p class="muted small">Suivez-nous sur 
+      <a href="https://www.instagram.com/staffconnex" target="_blank" rel="noopener">Instagram</a>
+    </p>
+  </section>
 
   <!-- Footer -->
   <footer class="site-footer">
     <div class="wrap foot">
-      © <span id="year"></span> StaffconneX — Recrutement cuisine ·
-      <a href="/politique-de-confidentialite.html">Politique de confidentialité</a>
+      <p>&copy; 2025 StaffconneX - Tous droits réservés.</p>
     </div>
   </footer>
 
-  <script>document.getElementById('year').textContent=new Date().getFullYear()</script>
 </body>
 </html>
