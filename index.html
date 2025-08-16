@@ -117,27 +117,37 @@
   </section>
 
   <!-- Contact -->
-  <section id="contact" class="wrap contact">
-    <h2>Contact</h2>
-    <div class="contact-ways">
-      <a class="way w" href="https://wa.me/33660778735" target="_blank" rel="noopener"><strong>WhatsApp</strong> · 06 60 77 87 35</a>
-      <a class="way m" href="mailto:contact@staffconnex.fr"><strong>Email</strong> · contact@staffconnex.fr</a>
-      <div class="way l"><strong>Zone d’activité</strong> · Nice, Monaco et alentours</div>
-    </div>
+<section id="contact" class="wrap contact">
+  <h2>Contact</h2>
 
-    <!-- Formspree : crée ton formulaire et remplace TON_ID -->
-    <form action="https://formspree.io/f/TON_ID" method="POST" class="form">
-      <input name="Nom" type="text" placeholder="Votre nom" required>
-      <input name="Email" type="email" placeholder="Votre email" required>
-      <textarea name="Message" rows="4" placeholder="Votre besoin (poste, ville, délai)"></textarea>
-      <input type="hidden" name="_subject" value="Message — staffconnex.fr">
-      <button class="btn btn-primary" type="submit">Envoyer</button>
-    </form>
+  <div class="contact-ways">
+    <a class="way w" href="https://wa.me/33660778735" target="_blank" rel="noopener"><strong>WhatsApp</strong> · 06 60 77 87 35</a>
+    <a class="way m" href="mailto:contact@staffconnex.fr"><strong>Email</strong> · contact@staffconnex.fr</a>
+    <div class="way l"><strong>Zone d’activité</strong> · Nice, Monaco et alentours</div>
+  </div>
 
-    <p class="muted small">Suivez-nous sur
-      <a href="https://www.instagram.com/staffconnex?igsh=MWNlNWdxNGxuengzbQ%3D%3D&utm_source=qr" target="_blank" rel="noopener">Instagram</a>.
-    </p>
-  </section>
+  <!-- Formulaire : envoi via Formspree -->
+  <form action="https://formspree.io/f/xblkerdz" method="POST" class="form">
+    <input name="name"  type="text"  placeholder="Votre nom" required>
+    <input name="email" type="email" placeholder="Votre email" required>
+    <textarea name="message" rows="4" placeholder="Votre besoin (poste, ville, délai)" required></textarea>
+
+    <!-- options utiles -->
+    <input type="hidden" name="_subject"  value="Message — staffconnex.fr">
+    <input type="hidden" name="_language" value="fr">
+    <!-- anti-spam -->
+    <input type="text" name="_gotcha" style="display:none">
+
+    <!-- (optionnel) décommente pour rediriger vers /merci.html après envoi -->
+    <!-- <input type="hidden" name="_redirect" value="https://staffconnex.fr/merci.html"> -->
+
+    <button class="btn btn-primary" type="submit">Envoyer</button>
+  </form>
+
+  <p class="muted small" style="margin-top:8px">
+    Suivez-nous sur <a href="https://www.instagram.com/staffconnex?igsh=MWNlNWdxNGxuengzbQ%3D%3D&utm_source=qr" target="_blank" rel="noopener">Instagram</a>.
+  </p>
+</section>
 
   <!-- Footer -->
   <footer class="site-footer">
